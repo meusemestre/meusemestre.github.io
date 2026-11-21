@@ -1,0 +1,17 @@
+MEU SEMESTRE 3.3
+
+Arquivos desta versão:
+- index.html: aplicação completa (arquivo principal do GitHub Pages).
+- favicon.png e favicon.ico: ícones da aba do navegador.
+
+PUBLICAÇÃO
+1. Faça backup dos seus dados dentro do Meu Semestre antes de atualizar.
+2. No repositório meusemestre.github.io, substitua o index.html pelo index.html desta versão.
+3. Mantenha favicon.png e favicon.ico na raiz do repositório.
+4. Aguarde o GitHub Pages concluir a publicação e abra https://meusemestre.github.io.
+
+COMPATIBILIDADE DE DADOS
+A versão 3.3 preserva o mesmo nome de banco IndexedDB e a mesma chave localStorage usada pela versão 3.2 de produção, para manter os registros existentes no mesmo navegador e endereço.
+
+MÉTRICAS E PRIVACIDADE
+O Google Analytics só é carregado depois que a pessoa escolhe “Aceitar análise”. A pessoa também pode recusar ou alterar a preferência em Configurações. Os eventos implementados enviam apenas nomes genéricos de telas/ações, nunca nomes de disciplinas, notas, tarefas, frequência ou observações.
