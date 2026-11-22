@@ -1,0 +1,19 @@
+MEU SEMESTRE 3.5.2 — CORREÇÃO DE LOGIN GOOGLE
+
+Correção principal:
+- Em celulares e navegadores incorporados, o login usa redirecionamento na mesma aba em vez de popup.
+- Em computadores, mantém o popup, com fallback para redirecionamento quando bloqueado.
+- O botão apresenta estado de redirecionamento e é reabilitado após o retorno da autenticação.
+
+PUBLICAÇÃO:
+1. Faça backup do index.html atual.
+2. Extraia este ZIP.
+3. Substitua o index.html na raiz do repositório GitHub Pages.
+4. Faça Commit changes.
+5. Abra https://meusemestre.github.io em uma aba normal do Chrome e atualize a página.
+
+IMPORTANTE:
+- No Firebase Console, Authentication > Sign-in method/Provedores de login: Google deve estar habilitado.
+- Authentication > Settings > Authorized domains deve incluir meusemestre.github.io.
+- O fluxo de login precisa ser testado no domínio HTTPS publicado. Não é possível confirmar uma autenticação Google real apenas com verificação local do HTML.
+- Não apague dados do navegador. A atualização mantém o mesmo armazenamento local.
