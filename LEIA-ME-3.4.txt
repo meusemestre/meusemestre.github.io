@@ -1,0 +1,35 @@
+MEU SEMESTRE 3.4 — ATUALIZAÇÃO VISUAL
+
+O que mudou
+- Identidade visual renovada, com azul mais vibrante, melhor contraste e cartões mais refinados.
+- Fonte Manrope com alternativas locais caso o dispositivo esteja sem internet.
+- Ícones de navegação maiores e padronizados; Atividades e Frequência agora usam símbolos distintos.
+- Ícone de Configurações redesenhado com o símbolo centralizado.
+- Dashboard, métricas, gráficos, listas, botões, formulários e configurações com hierarquia visual aprimorada.
+- Animações discretas, transições e estados de foco mais claros; respeita a preferência do sistema por movimento reduzido.
+- Tema claro e escuro refinados.
+- Corrigida a restauração indevida do tema claro para o automático ao reabrir a plataforma.
+
+Preservação de dados
+- Esta versão foi construída sobre o código 3.3.
+- Foram preservados o nome do banco IndexedDB, a versão do banco, os nomes das lojas, a chave localStorage e o formato atual dos dados.
+- Nenhuma migração destrutiva foi introduzida.
+- Mesmo assim, exporte um backup antes de atualizar, como prática de segurança.
+- Os dados continuam armazenados no próprio navegador/dispositivo. Não há sincronização automática entre aparelhos nem conta na nuvem.
+
+Como testar sem substituir a versão publicada
+1. Descompacte o arquivo.
+2. Abra o index.html no navegador para uma prévia. Para testar salvamento confiável, use um endereço HTTPS de teste; abertura por arquivo pode limitar o armazenamento.
+3. Teste no celular, tablet e computador.
+4. Só depois de conferir tudo, substitua os arquivos do repositório do GitHub Pages.
+
+Arquivos
+- index.html: plataforma completa.
+- favicon.png e favicon.ico: ícones da plataforma.
+
+Nota
+A fonte Manrope é carregada do Google Fonts quando existe conexão com a internet. Sem conexão, a plataforma usa fontes de sistema. As animações são leves e respeitam prefers-reduced-motion.
+
+Ajuste visual 3.4.1
+- Removidos os círculos decorativos dos cartões de métricas do dashboard, que estavam sobrepondo os títulos.
+- Ícones, textos, cores e demais componentes dos cartões foram mantidos.
