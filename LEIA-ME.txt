@@ -1,0 +1,11 @@
+MEU SEMESTRE 3.5.3
+
+Correção da atualização visual do estado da conta Google nas telas de navegação e Configurações.
+
+INSTALAÇÃO:
+1. Faça backup do index.html atual no GitHub.
+2. Substitua o index.html da raiz do repositório por este arquivo.
+3. Faça commit na branch main.
+4. Aguarde o GitHub Pages publicar e teste em https://meusemestre.github.io usando o Chrome.
+
+A autenticação e a sincronização Firebase da versão anterior foram preservadas. Esta correção foi validada estaticamente; o login real precisa ser confirmado no site publicado.
