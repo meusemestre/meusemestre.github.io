@@ -1,11 +1,13 @@
-MEU SEMESTRE 3.5.3
+MEU SEMESTRE — VERSÃO OFICIAL 3.5
 
-Correção da atualização visual do estado da conta Google nas telas de navegação e Configurações.
+Esta é a versão funcional que teve o login Google confirmado, com os rótulos de versão padronizados para 3.5 em todo o site.
 
-INSTALAÇÃO:
-1. Faça backup do index.html atual no GitHub.
-2. Substitua o index.html da raiz do repositório por este arquivo.
-3. Faça commit na branch main.
-4. Aguarde o GitHub Pages publicar e teste em https://meusemestre.github.io usando o Chrome.
+A alteração desta entrega foi limitada aos nomes/identificadores de versão exibidos e metadados de versão. O restante do código e os recursos da plataforma foram preservados.
 
-A autenticação e a sincronização Firebase da versão anterior foram preservadas. Esta correção foi validada estaticamente; o login real precisa ser confirmado no site publicado.
+PUBLICAÇÃO NO GITHUB PAGES
+1. Extraia este ZIP.
+2. Substitua o index.html da raiz do repositório pelo index.html incluído.
+3. Faça commit das alterações.
+4. Abra https://meusemestre.github.io no Chrome para conferir.
+
+Não apague os dados do navegador. Faça um backup antes de substituir o arquivo, por precaução.
