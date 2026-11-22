@@ -1,0 +1,20 @@
+MEU SEMESTRE 3.5.4
+
+Atualização desta versão:
+- Reconhecimento mais robusto da sessão Google já autenticada pelo Firebase.
+- Monitoramento do estado de login iniciado antes do carregamento local, sem iniciar sincronização até a restauração dos dados locais.
+- Reconciliação explícita do retorno do login por redirecionamento com auth.currentUser.
+- Botão superior e botão das Configurações atualizados de acordo com a conta autenticada.
+- Substituição do G textual pelo ícone multicolorido oficial do Google, servido pelo domínio oficial developers.google.com e mantido sobre fundo branco.
+
+INSTALAÇÃO
+1. Faça uma cópia de segurança do index.html atualmente publicado.
+2. No repositório GitHub Pages, substitua o arquivo index.html pelo index.html deste pacote.
+3. Faça commit das alterações.
+4. Aguarde o GitHub Pages publicar e teste em https://meusemestre.github.io usando o Chrome.
+
+IMPORTANTE
+- Esta versão não altera as regras do Firestore nem o caminho dos dados.
+- Não limpe os dados do navegador: os dados locais acadêmicos permanecem salvos no dispositivo.
+- O ícone oficial do Google é carregado de developers.google.com; é necessária conexão com a internet para exibi-lo.
+- A autenticação e a sincronização precisam ser confirmadas no site publicado. A validação de sintaxe não substitui um teste real com a conta Firebase.
