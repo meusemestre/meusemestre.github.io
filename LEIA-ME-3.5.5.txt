@@ -1,0 +1,28 @@
+MEU SEMESTRE 3.5.5 — VERSÃO DE TESTE DIRECIONADA
+
+CORREÇÃO PRINCIPAL
+- O login Google agora usa signInWithPopup tanto em computadores quanto em celulares.
+- A versão 3.5.4 forçava signInWithRedirect em dispositivos móveis. Como o site está hospedado no GitHub Pages (fora do Firebase Hosting), esse fluxo pode falhar em navegadores que bloqueiam armazenamento de terceiros.
+- A nova versão não tenta esconder falhas: se o navegador bloquear a janela, apresenta uma orientação para permitir pop-ups ou abrir o site diretamente no Chrome.
+- Mantém a leitura de getRedirectResult apenas para verificar uma tentativa de redirecionamento pendente iniciada em uma versão anterior.
+
+O QUE FOI PRESERVADO
+- O mesmo projeto e configuração Firebase.
+- O mesmo caminho de dados no Firestore: users/{uid}/appData/main.
+- O mesmo modelo de dados e as mesmas chaves de armazenamento local (MeuSemestreLocal / meuSemestre2_local).
+- As funções acadêmicas, o timer, os backups e os anexos locais.
+- Nenhuma limpeza, migração automática ou sobrescrita dos dados locais foi adicionada.
+
+COMO TESTAR
+1. Guarde uma cópia do index.html atualmente publicado. Não apague os dados do navegador.
+2. No repositório meusemestre.github.io, substitua apenas o index.html da raiz pelo arquivo deste pacote.
+3. Faça Commit changes e aguarde o GitHub Pages publicar.
+4. Abra https://meusemestre.github.io diretamente no Chrome (não em navegador interno de outro aplicativo).
+5. Toque em Entrar com Google. O navegador deverá abrir a janela de autenticação; escolha sua conta.
+6. Depois de retornar ao Meu Semestre, confira se o botão mostra sua conta e se a conta aparece em Firebase > Authentication > Users.
+7. Se surgir uma confirmação para enviar dados locais à nuvem, leia com atenção e só confirme depois de ter um backup exportado.
+
+IMPORTANTE
+- Esta versão é uma correção direcionada, não uma confirmação de que o login já está resolvido: o teste real depende da publicação e da conta Google do usuário.
+- Não use “limpar dados do site”, não desinstale o navegador e não apague o armazenamento local.
+- Anexos binários dos Materiais e foto de perfil em base64 continuam locais nesta versão; não são sincronizados pelo Firestore.
