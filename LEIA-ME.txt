@@ -1,13 +1,13 @@
-MEU SEMESTRE — VERSÃO OFICIAL 3.5
+MEU SEMESTRE 3.5 — PAINEL ATUALIZADO
 
-Esta é a versão funcional que teve o login Google confirmado, com os rótulos de versão padronizados para 3.5 em todo o site.
+Esta atualização remove do painel inicial os quatro cartões de indicadores: Disciplinas, Atividades pendentes, Média atual e Avaliações próximas.
 
-A alteração desta entrega foi limitada aos nomes/identificadores de versão exibidos e metadados de versão. O restante do código e os recursos da plataforma foram preservados.
+Os blocos que já existiam abaixo — lista de atividades, próximos compromissos, desempenho por disciplina, progresso, resumo do semestre, acesso rápido e perfil — passam a começar logo após o cartão de boas-vindas, ocupando o espaço liberado.
 
-PUBLICAÇÃO NO GITHUB PAGES
-1. Extraia este ZIP.
-2. Substitua o index.html da raiz do repositório pelo index.html incluído.
-3. Faça commit das alterações.
-4. Abra https://meusemestre.github.io no Chrome para conferir.
+Nenhuma funcionalidade de cadastro, nota, frequência, atividade, calendário, relatório, armazenamento ou autenticação foi intencionalmente alterada. A identificação da plataforma permanece em 3.5.
 
-Não apague os dados do navegador. Faça um backup antes de substituir o arquivo, por precaução.
+INSTALAÇÃO
+1. Faça um backup dos dados em Configurações > Backup e restauração, por precaução.
+2. Substitua o index.html da raiz do repositório GitHub pelo index.html deste pacote.
+3. Faça o commit e aguarde a atualização do GitHub Pages.
+4. Abra o site e atualize a página. Não limpe os dados do navegador.

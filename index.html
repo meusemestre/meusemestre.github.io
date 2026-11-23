@@ -278,8 +278,7 @@ button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-vis
 @keyframes softPulse{0%,100%{box-shadow:0 0 0 4px rgba(142,229,198,.11)}50%{box-shadow:0 0 0 7px rgba(142,229,198,.035)}}
 @keyframes floatCard{0%,100%{transform:translateY(0) rotate(3deg)}50%{transform:translateY(-7px) rotate(1.5deg)}}
 #content>*{animation:contentArrive .34s cubic-bezier(.2,.7,.2,1) both}
-#content>.metrics{animation-delay:.035s}
-#content>.dashboard-layout{animation-delay:.07s}
+#content>.dashboard-layout{animation-delay:.035s}
 #content .panel{animation:contentArrive .38s cubic-bezier(.2,.7,.2,1) both}
 #content .panel:nth-child(2){animation-delay:.035s}
 #content .panel:nth-child(3){animation-delay:.07s}
@@ -788,9 +787,7 @@ function dashboard(){
  const sid=state.activeSemesterId,subjects=activeSubjects(),tasks=scoped(state.tasks),grades=scoped(state.grades),events=scoped(state.events),sched=scoped(state.schedules),attendance=scoped(state.attendance);
  const pending=tasks.filter(t=>t.status!=='done'),done=tasks.filter(t=>t.status==='done').length;
  const upcoming=[...events.filter(e=>e.date>=todayISO()).map(e=>({...e,_source:'event'})),...grades.filter(g=>g.date&&g.date>=todayISO()).map(g=>({...g,_source:'grade',type:g.type||'Avaliação'}))].sort((a,b)=>(a.date+(a.time||'')).localeCompare(b.date+(b.time||''))).slice(0,4);
- const graded=subjects.map(s=>weightedAverage(s.id)).filter(x=>x!==null),avg=graded.length?graded.reduce((a,b)=>a+b,0)/graded.length:null;
  const attendanceTotal=attendance.reduce((sum,a)=>sum+(+a.lessons||1),0),attendancePresent=attendance.filter(a=>a.status==='present').reduce((sum,a)=>sum+(+a.lessons||1),0),attendancePercent=attendanceTotal?attendancePresent/attendanceTotal*100:null;
- const upcomingAssessments=grades.filter(g=>g.date&&g.date>=todayISO()).length;
  const nextTasks=pending.sort((a,b)=>(a.due||'9999').localeCompare(b.due||'9999')).slice(0,5);
  const profile=state.profile,semester=activeSemester(),progress=tasks.length?Math.round(done/tasks.length*100):0;
  const greeting=profile.name?`Olá, ${esc(profile.name.split(' ')[0])}!`:'Olá, estudante!';
@@ -807,12 +804,6 @@ function dashboard(){
   </div>
   <div class="welcome-art" aria-hidden="true"><div class="welcome-orbit orbit-one"></div><div class="welcome-orbit orbit-two"></div><div class="welcome-art-card"><div class="welcome-art-icon"><svg viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2Z"/><path d="M9 7h7M9 11h7"/></svg></div><strong>${subjects.length}</strong><span>disciplinas no semestre</span><div class="welcome-art-line"><i></i></div><small>${semester?'Seu semestre em foco':'Comece criando seu semestre'}</small></div></div>
  </section>
- <div class="metrics dashboard-metrics">
-  ${metric('Disciplinas',subjects.length,subjects.length?'No semestre selecionado':'Cadastre suas disciplinas')}
-  ${metric('Atividades pendentes',pending.length,pending.length?'Fique de olho nos prazos':'Nenhuma pendência','amber')}
-  ${metric('Média atual',avg===null?'—':fmtNum(avg,2),avg===null?'Aguardando avaliações':'Média das disciplinas com notas','purple')}
-  ${metric('Avaliações próximas',upcomingAssessments,upcomingAssessments?'Com data cadastrada no semestre':'Nenhuma avaliação futura cadastrada','amber')}
- </div>
  <div class="dashboard-layout">
   <div class="dashboard-main">
    <section class="panel dashboard-panel">
