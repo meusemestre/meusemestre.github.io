@@ -1,20 +1,26 @@
-MEU SEMESTRE 3.5 — AJUSTE DA BUSCA E DA NAVEGAÇÃO LATERAL
-
-Esta atualização mantém a identificação da plataforma como 3.5 e preserva as funcionalidades e os dados existentes.
-
-O que foi ajustado:
-- Busca global: expansão mais suave ao receber foco, realce discreto, ícone com microanimação e remoção do contorno interno quadrado que aparecia em alguns navegadores.
-- Resultados da busca: entrada mais suave e transições discretas nos itens.
-- Navegação lateral em telas grandes: substituição do posicionamento fixed por uma coluna sticky dentro do layout em grid, para evitar saltos durante a rolagem em navegadores móveis/tablets.
-- Menu lateral: remoção da rolagem interna isolada da lista de navegação; quando faltar altura, a barra lateral inteira rola como uma única coluna.
-- Telas pequenas: gaveta lateral preservada, com altura dinâmica do navegador e transição mais estável.
-
-Não foram intencionalmente alterados login Google, Firebase, sincronização, disciplinas, atividades, notas, frequência, calendário, relatórios ou armazenamento local.
+MEU SEMESTRE 3.5 — ABA DOCUMENTOS
 
 INSTALAÇÃO
-1. Por precaução, exporte um backup em Configurações > Backup e restauração.
-2. Substitua o index.html da raiz do repositório GitHub pelo index.html deste pacote.
-3. Faça o commit e aguarde a publicação do GitHub Pages.
-4. Abra o site e atualize a página. Não limpe os dados do navegador.
+1. Faça um backup dos seus dados acadêmicos em Configurações > Backup e restauração.
+2. Extraia este ZIP.
+3. No repositório meusemestre.github.io, substitua o index.html da raiz pelo index.html deste pacote.
+4. Faça o commit e aguarde a publicação do GitHub Pages.
+5. Abra https://meusemestre.github.io e acesse a nova aba Documentos.
 
-A autenticação e a navegação devem ser confirmadas no site publicado, especialmente no navegador/tablet em que o problema foi observado.
+RECURSOS
+- Biblioteca de documentos com pesquisa.
+- Editor com formatação de texto, títulos, listas, alinhamento, links, tabelas e imagens por endereço HTTPS.
+- Modelos para trabalho acadêmico, relatório e resumo.
+- Salvamento automático no armazenamento local da plataforma.
+- Integração dos documentos ao estado principal, backups e sincronização Firestore existente quando a conta Google estiver conectada e a sincronização estiver ativa.
+- Exportação para DOCX, PDF (pela opção Imprimir > Salvar como PDF do navegador), TXT e HTML.
+
+OBSERVAÇÕES IMPORTANTES
+- O login e as regras do Firebase não foram alterados.
+- O conteúdo dos documentos é salvo junto com os demais dados da plataforma. A sincronização na nuvem depende da conexão Google estar ativa e do salvamento no Firestore ser concluído.
+- A sincronização usa o registro principal existente do Firestore. Documentos muito grandes podem atingir o limite de tamanho do registro; nesse caso, o app preserva a cópia local e informa falha de sincronização.
+- Imagens são inseridas por endereço HTTPS. A exportação DOCX representa imagens por uma indicação textual, não incorpora o arquivo de imagem.
+- A exportação PDF abre a janela de impressão do navegador; selecione “Salvar como PDF”. Permita pop-ups para o site.
+- Mantenha backups periódicos como proteção adicional.
+
+Não limpe os dados do navegador durante a atualização.
