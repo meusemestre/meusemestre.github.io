@@ -1,13 +1,18 @@
-MEU SEMESTRE 3.5 — PAINEL ATUALIZADO
+MEU SEMESTRE 3.5 — BUSCA GLOBAL REFINADA
 
-Esta atualização remove do painel inicial os quatro cartões de indicadores: Disciplinas, Atividades pendentes, Média atual e Avaliações próximas.
+Esta atualização mantém os recursos da versão 3.5 e aprimora somente a experiência visual da busca global no cabeçalho.
 
-Os blocos que já existiam abaixo — lista de atividades, próximos compromissos, desempenho por disciplina, progresso, resumo do semestre, acesso rápido e perfil — passam a começar logo após o cartão de boas-vindas, ocupando o espaço liberado.
+O que mudou:
+- O campo de busca se expande suavemente ao receber foco.
+- O contorno interno azul do campo foi removido.
+- Ícone, borda e realce recebem transições suaves.
+- A lista de resultados aparece com animação discreta e entrada escalonada.
+- Ajustes responsivos para telas menores e suporte a preferência por movimento reduzido.
 
-Nenhuma funcionalidade de cadastro, nota, frequência, atividade, calendário, relatório, armazenamento ou autenticação foi intencionalmente alterada. A identificação da plataforma permanece em 3.5.
+Como atualizar:
+1. Faça uma cópia de segurança dos seus dados como precaução.
+2. Extraia este pacote.
+3. Substitua o index.html na raiz do repositório GitHub pelo novo index.html.
+4. Faça o commit e aguarde a publicação do GitHub Pages.
 
-INSTALAÇÃO
-1. Faça um backup dos dados em Configurações > Backup e restauração, por precaução.
-2. Substitua o index.html da raiz do repositório GitHub pelo index.html deste pacote.
-3. Faça o commit e aguarde a atualização do GitHub Pages.
-4. Abra o site e atualize a página. Não limpe os dados do navegador.
+Não apague os dados do navegador. Esta atualização não altera as regras do Firebase nem o formato dos dados acadêmicos.
