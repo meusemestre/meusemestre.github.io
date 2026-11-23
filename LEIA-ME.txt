@@ -1,26 +1,14 @@
-MEU SEMESTRE 3.5 — ABA DOCUMENTOS
+MEU SEMESTRE 3.5 — BUSCAS UNIFICADAS
+
+Esta atualização mantém a plataforma e suas funcionalidades existentes.
+A busca na biblioteca de Documentos agora usa a mesma interação visual da busca global: expansão suave, realce de foco, animação discreta do ícone e remoção do contorno interno quadrado.
+
+Em telas pequenas, o campo de Documentos continua ocupando toda a largura disponível e recebe o mesmo realce, sem perder espaço útil.
 
 INSTALAÇÃO
-1. Faça um backup dos seus dados acadêmicos em Configurações > Backup e restauração.
-2. Extraia este ZIP.
-3. No repositório meusemestre.github.io, substitua o index.html da raiz pelo index.html deste pacote.
-4. Faça o commit e aguarde a publicação do GitHub Pages.
-5. Abra https://meusemestre.github.io e acesse a nova aba Documentos.
+1. Faça um backup dos dados acadêmicos por segurança.
+2. Substitua o index.html na raiz do repositório GitHub Pages.
+3. Faça o commit e aguarde a publicação.
+4. Abra o site e teste as duas barras de pesquisa.
 
-RECURSOS
-- Biblioteca de documentos com pesquisa.
-- Editor com formatação de texto, títulos, listas, alinhamento, links, tabelas e imagens por endereço HTTPS.
-- Modelos para trabalho acadêmico, relatório e resumo.
-- Salvamento automático no armazenamento local da plataforma.
-- Integração dos documentos ao estado principal, backups e sincronização Firestore existente quando a conta Google estiver conectada e a sincronização estiver ativa.
-- Exportação para DOCX, PDF (pela opção Imprimir > Salvar como PDF do navegador), TXT e HTML.
-
-OBSERVAÇÕES IMPORTANTES
-- O login e as regras do Firebase não foram alterados.
-- O conteúdo dos documentos é salvo junto com os demais dados da plataforma. A sincronização na nuvem depende da conexão Google estar ativa e do salvamento no Firestore ser concluído.
-- A sincronização usa o registro principal existente do Firestore. Documentos muito grandes podem atingir o limite de tamanho do registro; nesse caso, o app preserva a cópia local e informa falha de sincronização.
-- Imagens são inseridas por endereço HTTPS. A exportação DOCX representa imagens por uma indicação textual, não incorpora o arquivo de imagem.
-- A exportação PDF abre a janela de impressão do navegador; selecione “Salvar como PDF”. Permita pop-ups para o site.
-- Mantenha backups periódicos como proteção adicional.
-
-Não limpe os dados do navegador durante a atualização.
+Não limpe os dados do navegador. A versão da plataforma permanece 3.5.

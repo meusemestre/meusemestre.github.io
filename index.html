@@ -615,6 +615,69 @@ body.dark .documents-welcome{background:linear-gradient(115deg,#172d4d,#172943 6
 @media print{.doc-editor-top,.doc-title-row,.doc-meta-row,.doc-toolbar,.doc-editor-footer{display:none!important}.doc-paper-wrap{padding:0!important;background:#fff!important}.doc-paper{box-shadow:none!important;border:0!important;width:100%!important;min-height:0!important;padding:0!important}.doc-editor{min-height:0!important}}
 </style>
 
+
+<style id="ms-unified-search-fields">
+/* Meu Semestre 3.5 — mesma interação suave para todas as barras de pesquisa */
+.docs-filter{
+  position:relative;
+  isolation:isolate;
+  flex:0 0 auto;
+  transform:translateZ(0);
+  transition:
+    width .38s cubic-bezier(.22,.8,.24,1),
+    border-color .26s ease,
+    background-color .26s ease,
+    box-shadow .3s ease,
+    transform .3s cubic-bezier(.2,.75,.25,1);
+  will-change:width,transform;
+  -webkit-tap-highlight-color:transparent;
+}
+.docs-filter > svg{
+  flex:0 0 auto;
+  transition:transform .3s cubic-bezier(.2,.75,.25,1),stroke .25s ease;
+}
+.docs-filter input,
+.docs-filter input:focus,
+.docs-filter input:focus-visible{
+  display:block;
+  min-width:0!important;
+  width:100%;
+  height:100%;
+  padding:0!important;
+  margin:0!important;
+  border:0!important;
+  outline:0!important;
+  box-shadow:none!important;
+  background:transparent!important;
+  color:var(--ink);
+  font:inherit;
+  font-size:10px;
+  appearance:none!important;
+  -webkit-appearance:none!important;
+}
+.docs-filter input::-webkit-search-decoration,
+.docs-filter input::-webkit-search-results-button,
+.docs-filter input::-webkit-search-results-decoration{display:none}
+.docs-filter:focus-within{
+  width:min(300px,55%);
+  border-color:rgba(75,125,224,.62);
+  background:var(--surface);
+  box-shadow:0 0 0 4px rgba(64,116,220,.10),0 10px 26px rgba(25,55,105,.10);
+  transform:translateY(-1px);
+}
+.docs-filter:focus-within > svg{transform:scale(1.08) rotate(-7deg);stroke:var(--blue)}
+body.dark .docs-filter:focus-within{
+  border-color:rgba(117,160,255,.72);
+  box-shadow:0 0 0 4px rgba(98,145,238,.13),0 12px 28px rgba(0,0,0,.22);
+}
+@media(max-width:600px){
+  .docs-filter,.docs-filter:focus-within{width:100%}
+}
+@media(prefers-reduced-motion:reduce){
+  .docs-filter,.docs-filter > svg,.docs-filter input{transition:none!important}
+}
+</style>
+
 </head>
 <body>
 <div class="app">
@@ -630,7 +693,7 @@ body.dark .documents-welcome{background:linear-gradient(115deg,#172d4d,#172943 6
  <button class="nav-item" data-page="calendar"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>Calendário</button>
  <button class="nav-item" data-page="grades"><svg viewBox="0 0 24 24"><path d="M3 3v18h18M7 14l4-4 4 3 5-7"/></svg>Notas e avaliações</button>
  <button class="nav-item" data-page="attendance" aria-label="Frequência"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4.5" width="18" height="17" rx="2.2"/><path d="M8 2.5v4M16 2.5v4M3 10h18"/><path d="m8 15 2.2 2.2L16 12"/></svg>Frequência</button>
- <div class="nav-section-label">Recursos</div><button class="nav-item" data-page="materials"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8zM14 2v6h6M8 13h8M8 17h8"/></svg>Materiais</button>
+ <div class="nav-section-label">Recursos</div><button class="nav-item" data-page="materials"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 7v14"/><path d="M3 18V5a2 2 0 0 1 2-2h3a4 4 0 0 1 4 4 4 4 0 0 1 4-4h3a2 2 0 0 1 2 2v13a1 1 0 0 1-1 1h-4a4 4 0 0 0-4 2 4 4 0 0 0-4-2H4a1 1 0 0 1-1-1z"/></svg>Materiais</button>
   <button class="nav-item" data-page="documents"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8zM14 2v6h6"/><path d="M8 13h8M8 17h8M8 9h2"/></svg>Documentos</button>
     <button class="nav-item" data-page="study"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Tempo de estudo</button>
  <button class="nav-item" data-page="reports"><svg viewBox="0 0 24 24"><path d="M4 19V5M4 19h17M8 16v-5M13 16V7M18 16v-9"/></svg>Relatórios</button>
