@@ -1,14 +1,26 @@
-MEU SEMESTRE 3.5 — BUSCAS UNIFICADAS
+MEU SEMESTRE 3.5 — PAGINAÇÃO A4
 
-Esta atualização mantém a plataforma e suas funcionalidades existentes.
-A busca na biblioteca de Documentos agora usa a mesma interação visual da busca global: expansão suave, realce de foco, animação discreta do ícone e remoção do contorno interno quadrado.
+O QUE MUDOU
+- O editor Documentos agora usa folhas com proporção A4 padrão.
+- Ao chegar ao fim de uma folha, o conteúdo continua automaticamente em uma nova página.
+- O editor pode criar várias páginas conforme o documento cresce; não há um limite pequeno de páginas definido na interface.
+- Setas esquerda e direita permitem navegar entre as páginas.
+- O botão "+ Página" permite inserir uma folha em branco manualmente.
+- O indicador mostra a página atual e a quantidade total de páginas.
+- A exportação PDF respeita as páginas armazenadas no editor.
 
-Em telas pequenas, o campo de Documentos continua ocupando toda a largura disponível e recebe o mesmo realce, sem perder espaço útil.
+SALVAMENTO E COMPATIBILIDADE
+- O conteúdo de cada página é salvo no documento e também mantém uma versão HTML consolidada para compatibilidade com os recursos de exportação e busca.
+- Documentos antigos que ainda não têm páginas salvas são abertos normalmente e paginados ao entrar no editor.
+- A estrutura continua usando o salvamento local e a sincronização existentes da plataforma. Não é necessário limpar dados nem alterar as regras do Firebase.
 
-INSTALAÇÃO
-1. Faça um backup dos dados acadêmicos por segurança.
-2. Substitua o index.html na raiz do repositório GitHub Pages.
-3. Faça o commit e aguarde a publicação.
-4. Abra o site e teste as duas barras de pesquisa.
+COMO ATUALIZAR
+1. Faça um backup dos seus dados em Configurações > Backup e restauração.
+2. Baixe e extraia este ZIP.
+3. No repositório do GitHub Pages, substitua somente o index.html da raiz.
+4. Faça o commit e abra o site publicado para testar.
 
-Não limpe os dados do navegador. A versão da plataforma permanece 3.5.
+IMPORTANTE
+- Não apague os dados do navegador.
+- A capacidade prática de documentos grandes depende do espaço disponível no dispositivo e dos limites do serviço de sincronização.
+- A validação de JavaScript foi concluída. A paginação visual e a edição de textos longos ainda devem ser confirmadas no navegador após a publicação.
