@@ -1,26 +1,64 @@
-MEU SEMESTRE 3.5 — PAGINAÇÃO A4
+MEU SEMESTRE 3.5 — FLASHCARDS
+================================
 
-O QUE MUDOU
-- O editor Documentos agora usa folhas com proporção A4 padrão.
-- Ao chegar ao fim de uma folha, o conteúdo continua automaticamente em uma nova página.
-- O editor pode criar várias páginas conforme o documento cresce; não há um limite pequeno de páginas definido na interface.
-- Setas esquerda e direita permitem navegar entre as páginas.
-- O botão "+ Página" permite inserir uma folha em branco manualmente.
-- O indicador mostra a página atual e a quantidade total de páginas.
-- A exportação PDF respeita as páginas armazenadas no editor.
+O QUE FOI ADICIONADO
+--------------------
+• Nova aba Flashcards na seção Recursos.
+• Biblioteca de baralhos com pesquisa, indicadores, meta diária e sequência de estudo.
+• Associação de baralhos a disciplinas e semestres.
+• Criação, edição, duplicação e exclusão de baralhos e cartões.
+• Quatro formatos: pergunta e resposta, preencher lacunas, múltipla escolha e identificação por imagem.
+• Cadastro individual ou em lote (uma linha por cartão no formato: pergunta | resposta).
+• Sessões de estudo com animação para revelar a resposta, embaralhamento, atalhos e avaliação de lembrança.
+• Repetição espaçada: o intervalo de revisão é ajustado conforme a avaliação do estudante.
+• Revisão geral dos cartões pendentes de todos os baralhos.
+• Resumo de sessão, histórico de revisões, sequência de estudo e estatísticas por baralho.
+• Exportação e importação de baralhos em JSON.
+• Integração dos dados de Flashcards ao estado principal da plataforma, aos backups e ao mecanismo existente de sincronização.
+• Interface responsiva, tema claro/escuro e animações suaves, respeitando a configuração de movimento reduzido do dispositivo.
 
-SALVAMENTO E COMPATIBILIDADE
-- O conteúdo de cada página é salvo no documento e também mantém uma versão HTML consolidada para compatibilidade com os recursos de exportação e busca.
-- Documentos antigos que ainda não têm páginas salvas são abertos normalmente e paginados ao entrar no editor.
-- A estrutura continua usando o salvamento local e a sincronização existentes da plataforma. Não é necessário limpar dados nem alterar as regras do Firebase.
+FORMATOS DE CARTÃO
+------------------
+1. Pergunta e resposta: frente e verso tradicionais.
+2. Preencher lacunas: escreva o trecho oculto entre chaves duplas. Exemplo: O coração possui {{quatro}} câmaras.
+3. Múltipla escolha: informe de 2 a 6 alternativas, uma por linha, e copie o texto da alternativa correta no campo correspondente.
+4. Identificação por imagem: use um endereço público HTTPS de uma imagem. Nesta versão, a imagem é referenciada por link; o arquivo de imagem não é enviado para o armazenamento da plataforma.
 
-COMO ATUALIZAR
-1. Faça um backup dos seus dados em Configurações > Backup e restauração.
-2. Baixe e extraia este ZIP.
-3. No repositório do GitHub Pages, substitua somente o index.html da raiz.
-4. Faça o commit e abra o site publicado para testar.
+ATALHOS NO MODO DE ESTUDO
+-------------------------
+• Espaço: revelar a resposta.
+• 1: Errei.
+• 2: Difícil.
+• 3: Bom.
+• 4: Fácil.
 
-IMPORTANTE
-- Não apague os dados do navegador.
-- A capacidade prática de documentos grandes depende do espaço disponível no dispositivo e dos limites do serviço de sincronização.
-- A validação de JavaScript foi concluída. A paginação visual e a edição de textos longos ainda devem ser confirmadas no navegador após a publicação.
+IMPORTAR E EXPORTAR
+-------------------
+Cada baralho pode ser exportado como arquivo JSON e importado em outro acesso à plataforma. Ao importar, o baralho e os cartões recebem novos identificadores e começam com histórico de revisão limpo; o arquivo original não é alterado.
+
+SALVAMENTO E SINCRONIZAÇÃO
+-------------------------
+Os baralhos, cartões, configurações e registros de revisão fazem parte dos dados do Meu Semestre e são salvos pelo armazenamento local já existente. Quando o usuário está conectado à conta Google e a sincronização da nuvem está ativa, esses dados entram no mesmo mecanismo de sincronização Firestore da plataforma.
+
+A sincronização remota precisa ser conferida após a publicação com a conta real em mais de um dispositivo. Os testes desta entrega validam o fluxo local da interface e as funções do módulo, mas não simulam uma gravação real no projeto Firebase.
+
+LIMITAÇÃO TÉCNICA ATUAL
+-----------------------
+A sincronização existente do Meu Semestre grava o estado geral da plataforma em um único registro Firestore, com uma proteção de tamanho de aproximadamente 850 KB. Coleções muito grandes de cartões e histórico podem atingir esse limite: os dados locais continuam preservados, mas a sincronização pode informar erro. Para uso em escala maior, a evolução recomendada é separar baralhos, cartões e revisões em documentos/subcoleções próprias do Firestore.
+
+COMO PUBLICAR
+-------------
+1. Antes de atualizar, exporte um backup dos seus dados em Configurações.
+2. Extraia este ZIP.
+3. No repositório do GitHub Pages, substitua somente o index.html da raiz pelo index.html deste pacote.
+4. Faça o commit e aguarde a publicação.
+5. Abra o site publicado no Chrome e teste criação de baralho, cartão e revisão.
+
+Não apague os dados do navegador nem altere as regras do Firebase para instalar esta atualização.
+
+IDENTIFICAÇÃO
+-------------
+A versão exibida permanece Meu Semestre 3.5.
+
+
+Atualização de interface: a busca da biblioteca de Flashcards agora utiliza a mesma animação de foco, realce e movimento do campo de busca global. Nenhuma regra de filtragem dos baralhos foi alterada.
