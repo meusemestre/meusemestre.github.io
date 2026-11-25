@@ -1,0 +1,43 @@
+MEU SEMESTRE 4.0 — CENTRAL DE DESEMPENHO
+
+Esta atualização parte do arquivo 4.0 com Planejador Inteligente. O Assistente Acadêmico não foi incluído.
+
+NOVIDADE
+- A antiga página Relatórios passa a se chamar Central de desempenho.
+- Painel de indicadores: média geral, frequência, atividades concluídas, tempo de estudo e revisões de Flashcards.
+- Filtro de período para totais de tempo de estudo, revisões e evolução das avaliações.
+- Gráfico de evolução das notas normalizadas para escala de 0 a 10.
+- Gráfico de tempo de estudo nos últimos sete dias.
+- Comparativo por disciplina com média ponderada e frequência registrada.
+- Pontos de atenção gerados a partir de prazos vencidos, média mínima configurada, frequência abaixo do limite e revisões pendentes.
+- Distribuição de atividades, situação dos Flashcards, próximos compromissos, tempo por disciplina e sessões recentes.
+- Exportação CSV ampliada para incluir frequência, sessões de estudo, baralhos e revisões de Flashcards.
+- Relatório PDF ampliado, gerado pela função de impressão do navegador.
+
+COMO OS INDICADORES SÃO CALCULADOS
+- Média geral: média simples das médias por disciplina; cada média por disciplina considera os pesos das avaliações e normaliza cada nota para uma escala de 0 a 10, usando o mesmo critério já adotado na página de Notas.
+- Frequência: aulas marcadas como presença divididas pelo total de aulas registradas (inclui registros não marcados como presença no denominador), seguindo a lógica da página Frequência existente.
+- Atividades: tarefas concluídas divididas pelo total de tarefas cadastradas no escopo do semestre.
+- Tempo de estudo: soma dos segundos das sessões já registradas no Tempo de estudo. Uma sessão em andamento só aparece depois de ser registrada ao finalizar.
+- Flashcards: o percentual de lembrança positiva considera avaliações marcadas como “Lembrei” ou “Muito fácil”. Cartões dominados seguem o critério do próprio módulo: pelo menos 3 repetições, intervalo de 14 dias ou mais e sem revisão vencida.
+- Campos sem dados são exibidos como “—” ou com uma mensagem explicativa; não são estimados nem preenchidos artificialmente.
+
+ESCOPO E PERÍODO
+- Média, frequência e tarefas consideram o semestre selecionado. Quando nenhum semestre está selecionado, os dados são consolidados entre semestres.
+- O seletor de período altera os totais e listas relacionados a sessões de estudo, revisões de Flashcards e o gráfico de evolução das avaliações.
+- O gráfico de ritmo de estudos mostra sempre os últimos sete dias, independentemente do período selecionado.
+
+DADOS E COMPATIBILIDADE
+- A Central utiliza os dados que a plataforma já guarda: subjects, grades, attendance, tasks, study.sessions, flashcards.decks e flashcards.reviewLog.
+- Nenhum campo acadêmico existente é removido ou migrado. O filtro de período é uma preferência temporária da tela.
+- A página usa a rotina de salvamento, backup e sincronização já existente. A sincronização real entre dispositivos continua dependendo da conta conectada e deve ser confirmada no site publicado.
+- A busca global e suas animações não foram alteradas.
+
+INSTALAÇÃO
+1. Faça um backup em Configurações > Backup e restauração.
+2. Extraia o ZIP.
+3. Substitua somente o index.html na raiz do repositório GitHub Pages.
+4. Faça o commit e aguarde o GitHub Pages publicar.
+5. Abra o site atualizado e confira a página “Central de desempenho”.
+
+Não limpe os dados do navegador e não altere as regras do Firebase para esta atualização.
