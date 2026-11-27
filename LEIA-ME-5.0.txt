@@ -1,0 +1,22 @@
+MEU SEMESTRE 5.0 — REVISÃO DE CONTRASTE E TEMA CLARO
+
+Esta versão parte da base vazia consolidada da 4.5 e preserva as remasterizações já aprovadas. O foco da 5.0 é corrigir textos, ícones e estados que ficavam com pouco contraste no tema claro.
+
+Inclui ajustes na barra lateral, Planejador Inteligente, Central de Desempenho, Visão Geral, Disciplinas, Horários, Calendário, Documentos, Flashcards, Tempo de estudo, tarefas e componentes compartilhados. O tema escuro mantém sua paleta e suas regras de superfície.
+
+O que foi preservado:
+- As áreas Visão Geral, Disciplinas, Horários, Calendário e Documentos.
+- As demais funções da plataforma, incluindo cadastro, edição, exclusão, revisão, exportação, cronômetro e sincronização.
+- A base vazia: novos usuários não recebem dados de demonstração.
+- Armazenamento local e Firebase.
+
+INSTALAÇÃO
+1. Faça backup do index.html atual.
+2. Extraia este ZIP.
+3. Substitua somente o index.html na raiz do repositório GitHub Pages.
+4. Publique o commit.
+5. Teste tema claro e escuro, especialmente Planejador, Central de Desempenho, Visão Geral, Disciplinas, Horários, Calendário e Documentos.
+
+Trocar o index.html não apaga os dados locais já salvos nem os registros sincronizados na conta Google. Não limpe o navegador como parte desta atualização.
+
+Validação: sintaxe de JavaScript e análise sintática de CSS verificadas. A renderização em navegador real não pôde ser executada neste ambiente.
